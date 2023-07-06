@@ -4,9 +4,9 @@
 #include <netinet/in.h>
 
 void add(uint32_t buf1, uint32_t buf2) {
-    uint32_t n1 = htonl(buf1);
+    uint32_t n1 = ntohl(buf1);
 
-    uint32_t n2 = htonl(buf2);
+    uint32_t n2 = ntohl(buf2);
 
     printf("%d(0x%x) + %d(0x%x) = %d(0x%x)\n",n1, n1, n2, n2, n1+n2, n1+n2);
 }
